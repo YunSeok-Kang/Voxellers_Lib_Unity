@@ -68,6 +68,8 @@ public class PIDController : MonoBehaviour
 
     public float GetErrorDerivative()
     {
+        if (_previousIndex < 0) { return 0f; }
+
         float difference = _errors[_currentIndex] - _errors[_previousIndex];
         float timeInterval = _timesteps[_currentIndex];
 
