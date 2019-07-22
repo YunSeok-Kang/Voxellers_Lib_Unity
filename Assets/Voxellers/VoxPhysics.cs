@@ -15,7 +15,6 @@ namespace Voxellers
         {
             Vector3 velocity = positionCurrent - positionLastFrame;
             velocity /= Time.deltaTime;
-            Debug.Log("Velocity: " + velocity);
 
             return PredictPositionWithVelocity(positionCurrent, velocity, secondsFromNow);
         }
